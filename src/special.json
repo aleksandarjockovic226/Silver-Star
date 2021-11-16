@@ -1,0 +1,37 @@
+[
+    {
+        "id": "0",
+        "name": "Prsten",
+        "price": 2400,
+        "key": 39055,
+        "photo": "./izdvojeno/slika1.jpg"
+    },
+    {
+        "id": "1",
+        "name": "Sat",
+        "price": 4000,
+        "key": 36035,
+        "photo": "./izdvojeno/slika2.jpg"
+    },
+    {
+        "id": "2",
+        "name": "Ogrlica",
+        "price": 2400,
+        "key": 33525,
+        "photo": "./izdvojeno/slika3.jpg"
+    },
+    {
+        "id": "3",
+        "name": "Mindjuse",
+        "price": 4600,
+        "key": 31696,
+        "photo": "./izdvojeno/slika4.jpg"
+    },
+    {
+        "id": "4",
+        "name": "Narukvica",
+        "price": 1300,
+        "key": 33859,
+        "photo": "./izdvojeno/slika5.jpg"
+    }
+]

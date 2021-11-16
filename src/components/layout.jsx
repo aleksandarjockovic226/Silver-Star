@@ -8,16 +8,20 @@ import Home from './pages/home.jsx'
 import Products from './pages/products.jsx'
 import Cart from './pages/cart.jsx';
 
+import '../sass/layout.sass'
+
 function Layout() {
     return (
         <BrowserRouter>
-            <Header />
-            <Routes>
-                <Route path='/' element={<Home />} />
-                <Route path='/products' element={<Products />} />
-                <Route path='/cart' element={<Cart />} />
-            </Routes>
-            <Footer />
+            <div className="wrapper">
+                <Header />
+                <Routes>
+                    <Route path='/' element={<Home />} />
+                    <Route path='/products' element={<Products />} />
+                    <Route path='/cart' element={<Cart />} />
+                </Routes>
+                <Footer />
+            </div>
         </BrowserRouter>
     )
 }
