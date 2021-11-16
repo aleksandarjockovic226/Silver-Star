@@ -15,7 +15,7 @@
             padding-top: 10%
             padding-left: 20%
     .right
-        height: calc( 50vh - 10rem )
+        min-height: calc( 50vh - 10rem )
         padding: 5rem
         display: grid
         background-color: gray
@@ -30,12 +30,18 @@
             textarea
                 height: 120px
                 padding: .5rem 1rem
+            label
+                margin-bottom: 10px
+            .labelSent
+                margin-bottom: 0px
+                margin-top: 10px
             input,textarea
                 padding-left: 1rem
                 padding-right: 1rem
-                margin-bottom: 20px
+                margin-bottom: 10px
                 width: calc( 100% - 2rem )
             button
+                cursor: pointer
                 height: 40px
                 background-color: #323232
                 color: white
