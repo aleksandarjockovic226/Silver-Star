@@ -1,0 +1,576 @@
+[
+    {
+        "id": "1",
+        "name": "Prsten 39055",
+        "price": 2400,
+        "category": "prsten",
+        "photo": "./izdvojeno/slika1.jpg"
+    },
+    {
+        "id": "2",
+        "name": "Prsten 39056",
+        "price": 2100,
+        "category": "prsten",
+        "photo": "./izdvojeno/slika1.jpg"
+    },
+    {
+        "id": "3",
+        "name": "Prsten 39057",
+        "price": 2100,
+        "category": "prsten",
+        "photo": "./izdvojeno/slika1.jpg"
+    },
+    {
+        "id": "4",
+        "name": "Prsten 39058",
+        "price": 1900,
+        "category": "prsten",
+        "photo": "./izdvojeno/slika1.jpg"
+    },
+    {
+        "id": "5",
+        "name": "Prsten 39059",
+        "price": 2500,
+        "category": "prsten",
+        "photo": "./izdvojeno/slika1.jpg"
+    },
+    {
+        "id": "6",
+        "name": "Prsten 39060",
+        "price": 2200,
+        "category": "prsten",
+        "photo": "./izdvojeno/slika1.jpg"
+    },
+    {
+        "id": "7",
+        "name": "Prsten 39061",
+        "price": 3200,
+        "category": "prsten",
+        "photo": "./izdvojeno/slika1.jpg"
+    },
+    {
+        "id": "8",
+        "name": "Prsten 39062",
+        "price": 3160,
+        "category": "prsten",
+        "photo": "./izdvojeno/slika1.jpg"
+    },
+    {
+        "id": "9",
+        "name": "Prsten 39063",
+        "price": 2700,
+        "category": "prsten",
+        "photo": "./izdvojeno/slika1.jpg"
+    },
+    {
+        "id": "10",
+        "name": "Prsten 39064",
+        "price": 1200,
+        "category": "prsten",
+        "photo": "./izdvojeno/slika1.jpg"
+    },
+    {
+        "id": "11",
+        "name": "Prsten 39065",
+        "price": 1300,
+        "category": "prsten",
+        "photo": "./izdvojeno/slika1.jpg"
+    },
+    {
+        "id": "12",
+        "name": "Prsten 39066",
+        "price": 1800,
+        "category": "prsten",
+        "photo": "./izdvojeno/slika1.jpg"
+    },
+    {
+        "id": "13",
+        "name": "Prsten 39067",
+        "price": 2000,
+        "category": "prsten",
+        "photo": "./izdvojeno/slika1.jpg"
+    },
+    {
+        "id": "14",
+        "name": "Prsten 39068",
+        "price": 3900,
+        "category": "prsten",
+        "photo": "./izdvojeno/slika1.jpg"
+    },
+    {
+        "id": "15",
+        "name": "Prsten 39069",
+        "price": 2400,
+        "category": "prsten",
+        "photo": "./izdvojeno/slika1.jpg"
+    },
+    {
+        "id": "16",
+        "name": "Narukvica 39070",
+        "price": 2100,
+        "category": "narukvica",
+        "photo": "./izdvojeno/slika5.jpg"
+    },
+    {
+        "id": "17",
+        "name": "Narukvica 39071",
+        "price": 2100,
+        "category": "narukvica",
+        "photo": "./izdvojeno/slika5.jpg"
+    },
+    {
+        "id": "18",
+        "name": "Narukvica 39072",
+        "price": 1900,
+        "category": "narukvica",
+        "photo": "./izdvojeno/slika5.jpg"
+    },
+    {
+        "id": "19",
+        "name": "Narukvica 39073",
+        "price": 2500,
+        "category": "narukvica",
+        "photo": "./izdvojeno/slika5.jpg"
+    },
+    {
+        "id": "20",
+        "name": "Narukvica 39074",
+        "price": 2200,
+        "category": "narukvica",
+        "photo": "./izdvojeno/slika5.jpg"
+    },
+    {
+        "id": "21",
+        "name": "Narukvica 39075",
+        "price": 3200,
+        "category": "narukvica",
+        "photo": "./izdvojeno/slika5.jpg"
+    },
+    {
+        "id": "22",
+        "name": "Narukvica 39076",
+        "price": 3160,
+        "category": "narukvica",
+        "photo": "./izdvojeno/slika5.jpg"
+    },
+    {
+        "id": "23",
+        "name": "Narukvica 39077",
+        "price": 2700,
+        "category": "narukvica",
+        "photo": "./izdvojeno/slika5.jpg"
+    },
+    {
+        "id": "24",
+        "name": "Narukvica 39078",
+        "price": 1200,
+        "category": "narukvica",
+        "photo": "./izdvojeno/slika5.jpg"
+    },
+    {
+        "id": "25",
+        "name": "Narukvica 39079",
+        "price": 1300,
+        "category": "narukvica",
+        "photo": "./izdvojeno/slika5.jpg"
+    },
+    {
+        "id": "26",
+        "name": "Narukvica 39080",
+        "price": 1800,
+        "category": "narukvica",
+        "photo": "./izdvojeno/slika5.jpg"
+    },
+    {
+        "id": "27",
+        "name": "Narukvica 39081",
+        "price": 2000,
+        "category": "narukvica",
+        "photo": "./izdvojeno/slika5.jpg"
+    },
+    {
+        "id": "28",
+        "name": "Narukvica 39082",
+        "price": 3900,
+        "category": "narukvica",
+        "photo": "./izdvojeno/slika5.jpg"
+    },
+    {
+        "id": "29",
+        "name": "Sat 39083",
+        "price": 4700,
+        "category": "sat",
+        "photo": "./izdvojeno/slika2.jpg"
+    },
+    {
+        "id": "30",
+        "name": "Sat 39084",
+        "price": 6200,
+        "category": "sat",
+        "photo": "./izdvojeno/slika2.jpg"
+    },
+    {
+        "id": "31",
+        "name": "Sat 39085",
+        "price": 2900,
+        "category": "sat",
+        "photo": "./izdvojeno/slika2.jpg"
+    },
+    {
+        "id": "32",
+        "name": "Sat 39086",
+        "price": 4800,
+        "category": "sat",
+        "photo": "./izdvojeno/slika2.jpg"
+    },
+    {
+        "id": "33",
+        "name": "Sat 39087",
+        "price": 5200,
+        "category": "sat",
+        "photo": "./izdvojeno/slika2.jpg"
+    },
+    {
+        "id": "34",
+        "name": "Sat 39088",
+        "price": 4160,
+        "category": "sat",
+        "photo": "./izdvojeno/slika2.jpg"
+    },
+    {
+        "id": "35",
+        "name": "Sat 39089",
+        "price": 7700,
+        "category": "sat",
+        "photo": "./izdvojeno/slika2.jpg"
+    },
+    {
+        "id": "36",
+        "name": "Sat 39090",
+        "price": 3200,
+        "category": "sat",
+        "photo": "./izdvojeno/slika2.jpg"
+    },
+    {
+        "id": "37",
+        "name": "Sat 39091",
+        "price": 4300,
+        "category": "sat",
+        "photo": "./izdvojeno/slika2.jpg"
+    },
+    {
+        "id": "38",
+        "name": "Sat 39092",
+        "price": 3800,
+        "category": "sat",
+        "photo": "./izdvojeno/slika2.jpg"
+    },
+    {
+        "id": "39",
+        "name": "Sat 39093",
+        "price": 2800,
+        "category": "sat",
+        "photo": "./izdvojeno/slika2.jpg"
+    },
+    {
+        "id": "40",
+        "name": "Sat 39094",
+        "price": 3900,
+        "category": "sat",
+        "photo": "./izdvojeno/slika2.jpg"
+    },
+    {
+        "id": "41",
+        "name": "Sat 39095",
+        "price": 3900,
+        "category": "sat",
+        "photo": "./izdvojeno/slika2.jpg"
+    },
+    {
+        "id": "42",
+        "name": "Sat 39096",
+        "price": 2700,
+        "category": "sat",
+        "photo": "./izdvojeno/slika2.jpg"
+    },
+    {
+        "id": "43",
+        "name": "Sat 39097",
+        "price": 6400,
+        "category": "sat",
+        "photo": "./izdvojeno/slika2.jpg"
+    },
+    {
+        "id": "45",
+        "name": "Sat 39098",
+        "price": 5800,
+        "category": "sat",
+        "photo": "./izdvojeno/slika2.jpg"
+    },
+    {
+        "id": "46",
+        "name": "Sat 39099",
+        "price": 4500,
+        "category": "sat",
+        "photo": "./izdvojeno/slika2.jpg"
+    },
+    {
+        "id": "47",
+        "name": "Sat 39100",
+        "price": 5600,
+        "category": "sat",
+        "photo": "./izdvojeno/slika2.jpg"
+    },
+    {
+        "id": "48",
+        "name": "Sat 39101",
+        "price": 6700,
+        "category": "sat",
+        "photo": "./izdvojeno/slika2.jpg"
+    },
+    {
+        "id": "49",
+        "name": "Sat 39102",
+        "price": 4260,
+        "category": "sat",
+        "photo": "./izdvojeno/slika2.jpg"
+    },
+    {
+        "id": "50",
+        "name": "Sat 39103",
+        "price": 7100,
+        "category": "sat",
+        "photo": "./izdvojeno/slika2.jpg"
+    },
+    {
+        "id": "51",
+        "name": "Sat 39104",
+        "price": 4500,
+        "category": "sat",
+        "photo": "./izdvojeno/slika2.jpg"
+    },
+    {
+        "id": "52",
+        "name": "Sat 39105",
+        "price": 3800,
+        "category": "sat",
+        "photo": "./izdvojeno/slika2.jpg"
+    },
+    {
+        "id": "53",
+        "name": "Sat 39106",
+        "price": 6200,
+        "category": "sat",
+        "photo": "./izdvojeno/slika2.jpg"
+    },
+    {
+        "id": "54",
+        "name": "Sat 39107",
+        "price": 5600,
+        "category": "sat",
+        "photo": "./izdvojeno/slika2.jpg"
+    },
+    {
+        "id": "55",
+        "name": "Sat 39108",
+        "price": 4200,
+        "category": "sat",
+        "photo": "./izdvojeno/slika2.jpg"
+    },
+    {
+        "id": "56",
+        "name": "Ogrlica 39109",
+        "price": 11600,
+        "category": "ogrlica",
+        "photo": "./izdvojeno/slika3.jpg"
+    },
+    {
+        "id": "57",
+        "name": "Ogrlica 39110",
+        "price": 6700,
+        "category": "ogrlica",
+        "photo": "./izdvojeno/slika3.jpg"
+    },
+    {
+        "id": "58",
+        "name": "Ogrlica 39111",
+        "price": 4260,
+        "category": "ogrlica",
+        "photo": "./izdvojeno/slika3.jpg"
+    },
+    {
+        "id": "59",
+        "name": "Ogrlica 39112",
+        "price": 2100,
+        "category": "ogrlica",
+        "photo": "./izdvojeno/slika3.jpg"
+    },
+    {
+        "id": "60",
+        "name": "Ogrlica 39113",
+        "price": 9500,
+        "category": "ogrlica",
+        "photo": "./izdvojeno/slika3.jpg"
+    },
+    {
+        "id": "61",
+        "name": "Ogrlica 39114",
+        "price": 8400,
+        "category": "ogrlica",
+        "photo": "./izdvojeno/slika3.jpg"
+    },
+    {
+        "id": "62",
+        "name": "Ogrlica 39115",
+        "price": 6200,
+        "category": "ogrlica",
+        "photo": "./izdvojeno/slika3.jpg"
+    },
+    {
+        "id": "63",
+        "name": "Ogrlica 39116",
+        "price": 12600,
+        "category": "ogrlica",
+        "photo": "./izdvojeno/slika3.jpg"
+    },
+    {
+        "id": "64",
+        "name": "Ogrlica 39117",
+        "price": 3200,
+        "category": "ogrlica",
+        "photo": "./izdvojeno/slika3.jpg"
+    },
+    {
+        "id": "65",
+        "name": "Ogrlica 39118",
+        "price": 8200,
+        "category": "ogrlica",
+        "photo": "./izdvojeno/slika3.jpg"
+    },
+    {
+        "id": "66",
+        "name": "Ogrlica 39119",
+        "price": 4200,
+        "category": "ogrlica",
+        "photo": "./izdvojeno/slika3.jpg"
+    },
+    {
+        "id": "67",
+        "name": "Ogrlica 39120",
+        "price": 5700,
+        "category": "ogrlica",
+        "photo": "./izdvojeno/slika3.jpg"
+    },
+    {
+        "id": "68",
+        "name": "Minđuše 39121",
+        "price": 600,
+        "category": "minđuše",
+        "photo": "./izdvojeno/slika4.jpg"
+    },
+    {
+        "id": "69",
+        "name": "Minđuše 39122",
+        "price": 1600,
+        "category": "minđuše",
+        "photo": "./izdvojeno/slika4.jpg"
+    },
+    {
+        "id": "70",
+        "name": "Minđuše 39123",
+        "price": 400,
+        "category": "minđuše",
+        "photo": "./izdvojeno/slika4.jpg"
+    },
+    {
+        "id": "71",
+        "name": "Minđuše 39124",
+        "price": 2400,
+        "category": "minđuše",
+        "photo": "./izdvojeno/slika4.jpg"
+    },
+    {
+        "id": "72",
+        "name": "Minđuše 39125",
+        "price": 2300,
+        "category": "minđuše",
+        "photo": "./izdvojeno/slika4.jpg"
+    },
+    {
+        "id": "73",
+        "name": "Minđuše 39126",
+        "price": 3600,
+        "category": "minđuše",
+        "photo": "./izdvojeno/slika4.jpg"
+    },
+    {
+        "id": "74",
+        "name": "Minđuše 39127",
+        "price": 4600,
+        "category": "minđuše",
+        "photo": "./izdvojeno/slika4.jpg"
+    },
+    {
+        "id": "75",
+        "name": "Minđuše 39128",
+        "price": 1200,
+        "category": "minđuše",
+        "photo": "./izdvojeno/slika4.jpg"
+    },
+    {
+        "id": "76",
+        "name": "Minđuše 39129",
+        "price": 1600,
+        "category": "minđuše",
+        "photo": "./izdvojeno/slika4.jpg"
+    },
+    {
+        "id": "77",
+        "name": "Minđuše 39130",
+        "price": 300,
+        "category": "minđuše",
+        "photo": "./izdvojeno/slika4.jpg"
+    },
+    {
+        "id": "78",
+        "name": "Minđuše 39131",
+        "price": 400,
+        "category": "minđuše",
+        "photo": "./izdvojeno/slika4.jpg"
+    },
+    {
+        "id": "79",
+        "name": "Minđuše 39132",
+        "price": 800,
+        "category": "minđuše",
+        "photo": "./izdvojeno/slika4.jpg"
+    },
+    {
+        "id": "80",
+        "name": "Minđuše 39133",
+        "price": 600,
+        "category": "minđuše",
+        "photo": "./izdvojeno/slika4.jpg"
+    },
+    {
+        "id": "81",
+        "name": "Minđuše 39134",
+        "price": 1100,
+        "category": "minđuše",
+        "photo": "./izdvojeno/slika4.jpg"
+    },
+    {
+        "id": "82",
+        "name": "Minđuše 39135",
+        "price": 700,
+        "category": "minđuše",
+        "photo": "./izdvojeno/slika4.jpg"
+    },
+    {
+        "id": "83",
+        "name": "Minđuše 39136",
+        "price": 200,
+        "category": "minđuše",
+        "photo": "./izdvojeno/slika4.jpg"
+    }
+]

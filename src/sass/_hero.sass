@@ -5,8 +5,28 @@
     grid-gap: 10%
     height: calc( 100vh - 60px )
     .left
+        background-image: url(../img/hero1.jpg)
+        background-size: cover
         background-color: gray
         height: 60vh
+        align-items: end
+
+        p
+            color: white
+            font-size: 5rem
+            text-align: start
+            margin-left: 1rem
+
+
     .right
+        background-image: url(../img/hero2.jpg)
+        background-size: cover
         background-color: gray
         height: 50vh
+        p
+            text-align: end
+            margin-right: 1rem
+            color: black
+            font-size: 3rem
+    .left,.right
+        display: grid

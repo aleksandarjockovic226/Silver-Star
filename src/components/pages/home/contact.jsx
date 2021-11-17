@@ -1,8 +1,6 @@
 import React, { useRef, useState } from 'react';
 import SendSvg from '../../../img/send.svg';
 
-
-
 function Contact() {
     const name = useRef();
     const email = useRef();
@@ -16,33 +14,56 @@ function Contact() {
 
     const [sentMessage, setSentMessage] = useState("")
 
-    let regexEmail = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
-    let regexPhone = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
-
-
+    let regexEmail = /^(([^<>()[\].,;:\s@"]+(.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+.)+[^<>()[\].,;:\s@"]{2,})$/i;
+    let regexPhone = /^[+]?[(]?[0-9]{3}[)]?[-\s.]?[0-9]{3}[-\s.]?[0-9]{4,6}$/im;
 
     const handleSend = (e) => {
+
         e.preventDefault();
+
         if (name.current.value === "" || name.current.value.length < 3) {
-            const nameErrText = "Unesite ime sa minimum 3 karaktera"
+            const nameErrText = "Unesite ime sa minimum 3 karaktera."
             setNameErr(nameErrText)
-        } else if (email.current.value === "" || !regexEmail.test(email.current.value)) {
-            const emailErrText = "Unesite ispravnu email adresu"
-            setEmailErr(emailErrText)
-        } else if (phone.current.value === "" || !regexPhone.test(phone.current.value)) {
-            const phoneErrText = "Unesite ispravan broj telefona"
-            setPhoneErr(phoneErrText)
-        } else if (message.current.value === "" || message.current.value.length < 9) {
-            const messageErrText = "Unesite poruku sa minimum 9 karaktera"
-            setMessageErr(messageErrText)
+            setSentMessage("")
+            return
         } else {
             setNameErr("")
+        } if (email.current.value === "" || !regexEmail.test(email.current.value)) {
+            const emailErrText = "Unesite ispravnu email adresu."
+            setEmailErr(emailErrText)
+            setSentMessage("")
+            return
+        } else {
             setEmailErr("")
+        } if (phone.current.value === "" || !regexPhone.test(phone.current.value)) {
+            const phoneErrText = "Unesite ispravan broj telefona."
+            setPhoneErr(phoneErrText)
+            setSentMessage("")
+            return
+        } else {
             setPhoneErr("")
+        } if (message.current.value === "" || message.current.value.length < 9) {
+            const messageErrText = "Unesite poruku sa minimum 9 karaktera."
+            setMessageErr(messageErrText)
+            setSentMessage("")
+            return
+        } else {
             setMessageErr("")
-            
-            setSentMessage("Vaša poruka je poslata.")
         }
+
+        if (nameErr !== "" && emailErr !== "" && phoneErr !== "" && messageErr !== "") {
+            setSentMessage("")
+            return
+        } else {
+            setSentMessage("Vaša poruka je poslata.")
+            name.current.value = ""
+            email.current.value = ""
+            phone.current.value = ""
+            message.current.value = ""
+        }
+
+
+
     }
     return (
         <div id="contact">
@@ -90,7 +111,7 @@ function Contact() {
                     ></textarea>
 
                     <button name="btn" onClick={handleSend} >Pošaljite<img src={SendSvg} alt="send" /></button>
-                    <label className="labelSent" htmlFor="bt">{sentMessage}</label>
+                    <label className="labelSent" htmlFor="btn">{sentMessage}</label>
                 </form>
             </div>
         </div>
