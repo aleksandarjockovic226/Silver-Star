@@ -1,0 +1,49 @@
+#products
+    padding: 3rem 0px
+    display: grid
+    grid-template-columns: 12% 1fr
+    .filters
+        p
+            font-size: 1.15rem
+        .cat
+            margin-bottom: 20px
+    .products-container
+        display: grid
+        .grid
+            display: grid
+            grid-template-columns: 1fr 1fr 1fr 1fr
+            justify-items: center
+            .item
+                margin-bottom: 20px
+                width: 240px
+                p
+                    margin: .4rem 0px
+                .card-div
+                    display: flex
+                    justify-content: space-between
+                    align-items: center
+                    .btn
+                        cursor: pointer
+                        padding: .7rem 1.2rem
+                        border: 1px solid black
+                img
+                    width: 100%
+                    height: 300px   
+        .pagination
+            padding: 20px 0px
+            display: flex
+            justify-content: space-between
+            align-items: center
+            .arrows
+                width: 100px
+                display: flex
+                justify-content: space-between
+                .prev,.next
+                    cursor: pointer
+            .numbers
+                list-style-type: none
+                li
+                    padding: .2rem 1rem
+                    display: inline
+                .active-page
+                    border: 1px solid black

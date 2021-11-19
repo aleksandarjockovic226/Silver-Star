@@ -18,7 +18,7 @@ export default function Products() {
     const itemsPerPage = 12
     const pagesVisited = pageNumber * itemsPerPage
     const pagesNumber = [];
-
+    const math = Math.floor(productsOnPage.length / itemsPerPage)
     for (let i = 1; i <= Math.ceil(productsOnPage.length / itemsPerPage); i++) {
         pagesNumber.push(i);
     }
@@ -26,15 +26,21 @@ export default function Products() {
         setPageNumber(pagesNumber);
     };
     function onNext() {
-        if (pageNumber === Math.floor(productsOnPage.length / itemsPerPage)) {
+        if (pageNumber === math) {
+            paginate(0)
+        } else if (pagesNumber.length === 1) {
             paginate(0)
         } else {
             paginate(pageNumber + 1)
         }
+
     }
     function onPrev() {
         if (pageNumber === 0) {
-            paginate(Math.floor(productsOnPage.length / itemsPerPage))
+            paginate(math)
+            if (pagesNumber.length === 1) {
+                paginate(0)
+            } 
         } else {
             paginate(pageNumber - 1)
         }
@@ -106,8 +112,8 @@ export default function Products() {
                     </select>
                 </form>
             </div>
-            <div className="grid">
-                <div className="items">
+            <div className="products-container">
+                <div className="grid">
                     {productsOnPage
                         .slice(pagesVisited, pagesVisited + itemsPerPage)
                         .map((item) => {
@@ -115,9 +121,9 @@ export default function Products() {
                                 <div className="item-container" key={item.id}>
                                     <div className="item">
                                         <img src={item.photo} alt={item.id} />
-                                        <h4>{item.name}</h4>
+                                        <p>{item.name}</p>
                                         <div className="card-div">
-                                            <h4>{item.price} .00 Rsd</h4>
+                                            <p>{item.price} .00 Rsd</p>
                                             <div className="btn">
                                                 Dodaj u korpu
                                             </div>
@@ -128,24 +134,23 @@ export default function Products() {
                         })
                     }
                 </div>
-            </div>
-            <div className="pagination">
-                <div className="arrows">
-                    <div onClick={onPrev} className="prev"><img src={PrevSvg} alt="arrow-prev" /></div>
-                    <div onClick={onNext} className="next"><img src={NextSvg} alt="arrow-next" /></div>
+                <div className="pagination">
+                    <div className="arrows">
+                        <div onClick={onPrev} className="prev"><img src={PrevSvg} alt="arrow-prev" /></div>
+                        <div onClick={onNext} className="next"><img src={NextSvg} alt="arrow-next" /></div>
+                    </div>
+                    <ul className="numbers">
+                        {pagesNumber.map((number) => (
+                            <li key={number}
+                                className={pageNumber + 1 === number ? "active-page" : ""}
+                                onClick={() =>
+                                    paginate(number)}>
+                                {number--}
+                            </li>
+                        ))}
+                    </ul>
                 </div>
-                <ul>
-                    {pagesNumber.map((number) => (
-                        <li key={number}
-                            className={pageNumber+1 === number ? "active-page-item" : "page-item"}
-                            onClick={() =>
-                                paginate(number)}>
-                            {number--}
-                        </li>
-                    ))}
-                </ul>
             </div>
-
         </div>
     )
 }
