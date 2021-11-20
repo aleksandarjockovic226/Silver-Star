@@ -1,0 +1,64 @@
+#cart
+    display: flex
+    justify-content: space-between
+    padding: 3rem 0px
+    h2
+        margin-bottom: 2rem
+    .cartItemsList
+        width: 66%
+        display: grid
+        box-shadow: 0px 0px 6px -2px rgba(0,0,0,0.63)
+        padding: 1rem
+        .product
+            margin-bottom: 2rem
+            display: flex
+            justify-content: space-between
+            img
+                width: 24%
+            .desc
+                width: 74%
+                display: grid
+                align-content: space-between
+            .top,.bottom
+                height: 1.7rem
+                display: flex
+                align-items: center
+                justify-content: space-between
+            .quantity
+                align-items: center
+                display: flex
+                p
+                    margin-right: 1rem
+                div
+                    width: .7rem
+                    height: .7rem
+                    padding: .5rem
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                .decrease,.increase
+                    border: 1px solid #323232
+                    background-color: #323232
+                    color: white
+                    cursor: pointer
+                .number
+                    border-top: 1px solid #323232
+                    border-bottom: 1px solid #323232
+            .remove
+                font-size: 1.3rem
+                cursor: pointer
+    .buy
+        width: 28%
+        display: grid
+        box-shadow: 0px 0px 6px -2px rgba(0,0,0,0.63)
+        padding: 1rem
+        height: 16rem
+        .basePrice,.shippingPrice,.totalPrice
+            display: flex
+            justify-content: space-between
+        .btn
+            display: flex
+            justify-content: center
+            align-items: center
+            cursor: pointer
+            border: 1px solid black

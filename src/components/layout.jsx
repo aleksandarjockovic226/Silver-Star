@@ -29,9 +29,10 @@ function Layout() {
         } else {
             setInCart(inCart.map((item) => item.key === product.key ? { ...exist, quantity: exist.quantity - 1 } : item))
         }
-
     }
-
+    const onRemoveItem = (product)=>{
+        setInCart(inCart.filter((item) => item.key !== product.key))
+    }
     return (
         <BrowserRouter>
             <div className="wrapper">
@@ -39,7 +40,7 @@ function Layout() {
                 <Routes>
                     <Route path='/' element={<Home onAddToCart={onAddToCart} />} />
                     <Route path='/products' element={<Products onAddToCart={onAddToCart} />} />
-                    <Route path='/cart' element={<Cart inCart={inCart} onRemoveFromCart={onRemoveFromCart} onAddToCart={onAddToCart} />} />
+                    <Route path='/cart' element={<Cart inCart={inCart} onRemoveFromCart={onRemoveFromCart} onAddToCart={onAddToCart} onRemoveItem={onRemoveItem} />} />
                 </Routes>
                 <Footer />
             </div>

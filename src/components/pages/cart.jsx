@@ -3,8 +3,8 @@ import React from 'react';
 import '../../sass/cart.sass'
 
 export default function Cart(props) {
-    const {inCart, onAddToCart, onRemoveFromCart} = props
-    const itemsPrice = inCart.reduce((a,c) => a + c.price * c.quantity, 0);
+    const { inCart, onAddToCart, onRemoveFromCart, onRemoveItem } = props
+    const itemsPrice = inCart.reduce((a, c) => a + c.price * c.quantity, 0);
     const shippingPrice = itemsPrice > 3000 ? 0 : 350;
     const totalPrice = itemsPrice + shippingPrice;
 
@@ -12,7 +12,7 @@ export default function Cart(props) {
         return (
             <div id="cart">
                 <div className="cartItemsList">
-                    PRAZNO
+                    <h2>Vaša korpa je prazna</h2>
                 </div>
                 <div className="buy">
                     <p className="title">Vrednost Vaše korpe:</p>
@@ -28,22 +28,24 @@ export default function Cart(props) {
     } else {
         return (
             <div id="cart">
-                <div className="cartItemsList">{
+                <div className="cartItemsList">
+                    <h2>Vaša korpa:</h2>
+                    {
                     inCart.map((product) => {
                         return (
-                            <div key={product.key}>
+                            <div className="product" key={product.key}>
                                 <img src={product.photo} alt={product.name} />
                                 <div className="desc">
                                     <div className="top">
                                         <p className="itemName">{product.name + " " + product.key}</p>
-                                        <div className="quantity">
-                                            <div onClick={()=>onRemoveFromCart(product)} className="decrease">-</div>
+                                        <div className="quantity"><p>Količina :</p>
+                                            <div onClick={() => onRemoveFromCart(product)} className="decrease">-</div>
                                             <div className="number">{product.quantity}</div>
-                                            <div onClick={()=>onAddToCart(product)} className="increase">+</div>
+                                            <div onClick={() => onAddToCart(product)} className="increase">+</div>
                                         </div>
                                     </div>
                                     <div className="bottom">
-                                        <div className="btn">Ukolni iz korpe</div>
+                                        <div onClick={() => onRemoveItem(product)} className="remove">Ukolni iz korpe</div>
                                         <div className="price">Cena po komadu: {product.price}.00 rsd</div>
                                     </div>
                                 </div>
@@ -53,13 +55,13 @@ export default function Cart(props) {
                 }
                 </div>
                 <div className="buy">
-                    <p className="title">Vrednost Vaše korpe:</p>
+                    <h2 className="title">Vrednost Vaše korpe:</h2>
                     <div className="container">
                         <div className="basePrice"><p>Vrednost korpe:</p><span>{itemsPrice},00 rsd</span></div>
                         <div className="shippingPrice"><p>Dostava</p><span>{shippingPrice}.00rsd</span></div>
                     </div>
                     <div className="totalPrice"><p>Ukupna vrednost korpe sa dostavom</p><span>{totalPrice}.00rsd</span></div>
-                    <button>Poručgit site</button>
+                    <div className="btn">Poručite</div>
                 </div>
             </div>
         )
