@@ -4,6 +4,10 @@ import '../../sass/cart.sass'
 
 export default function Cart(props) {
     const {inCart, onAddToCart, onRemoveFromCart} = props
+    const itemsPrice = inCart.reduce((a,c) => a + c.price * c.quantity, 0);
+    const shippingPrice = itemsPrice > 3000 ? 0 : 350;
+    const totalPrice = itemsPrice + shippingPrice;
+
     if (inCart.length === 0) {
         return (
             <div id="cart">
@@ -51,10 +55,10 @@ export default function Cart(props) {
                 <div className="buy">
                     <p className="title">Vrednost Vaše korpe:</p>
                     <div className="container">
-                        <div className="basePrice"><p>Vrednost korpe:</p><span>0.00rsd</span></div>
-                        <div className="shippingPrice"><p>Dostava</p><span>0.00rsd</span></div>
+                        <div className="basePrice"><p>Vrednost korpe:</p><span>{itemsPrice},00 rsd</span></div>
+                        <div className="shippingPrice"><p>Dostava</p><span>{shippingPrice}.00rsd</span></div>
                     </div>
-                    <div className="totalPrice"><p>Ukupna vrednost korpe sa dostavom</p><span>0.00rsd</span></div>
+                    <div className="totalPrice"><p>Ukupna vrednost korpe sa dostavom</p><span>{totalPrice}.00rsd</span></div>
                     <button>Poručgit site</button>
                 </div>
             </div>

@@ -5,7 +5,8 @@ import CartSvg from '../img/cart.svg';
 
 import '../sass/header.sass'
 
-export default function Header() {
+export default function Header(props) {
+    const { numberOfItemsInCart } = props
     return (
         <header>
             <nav>
@@ -17,12 +18,12 @@ export default function Header() {
                     <li><HashLink to='/#contact'>Kontakt</HashLink></li>
                 </ul>
                 <div className="burger">
-                <div className="line1"></div>
-                <div className="line2"></div>
-                <div className="line3"></div>
-            </div>
+                    <div className="line1"></div>
+                    <div className="line2"></div>
+                    <div className="line3"></div>
+                </div>
             </nav>
-            <Link className="cartLink" to='/cart'>Korpa<img src={CartSvg} alt='cart' /></Link>
+            <Link className="cartLink" to='/cart'>Korpa{numberOfItemsInCart ? (<div className="numberOfItems">{numberOfItemsInCart}</div>) : ''} <img src={CartSvg} alt='cart' /></Link>
         </header>
     )
 }

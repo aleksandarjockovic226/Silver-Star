@@ -35,7 +35,7 @@ function Layout() {
     return (
         <BrowserRouter>
             <div className="wrapper">
-                <Header />
+                <Header numberOfItemsInCart={inCart.length} />
                 <Routes>
                     <Route path='/' element={<Home onAddToCart={onAddToCart} />} />
                     <Route path='/products' element={<Products onAddToCart={onAddToCart} />} />
