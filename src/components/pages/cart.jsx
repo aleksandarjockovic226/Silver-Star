@@ -3,8 +3,7 @@ import React from 'react';
 import '../../sass/cart.sass'
 
 export default function Cart(props) {
-    const {inCart} = props
-    console.log(inCart);
+    const {inCart, onAddToCart, onRemoveFromCart} = props
     if (inCart.length === 0) {
         return (
             <div id="cart">
@@ -34,9 +33,9 @@ export default function Cart(props) {
                                     <div className="top">
                                         <p className="itemName">{product.name + " " + product.key}</p>
                                         <div className="quantity">
-                                            <div className="decrease">-</div>
+                                            <div onClick={()=>onRemoveFromCart(product)} className="decrease">-</div>
                                             <div className="number">{product.quantity}</div>
-                                            <div className="increase">+</div>
+                                            <div onClick={()=>onAddToCart(product)} className="increase">+</div>
                                         </div>
                                     </div>
                                     <div className="bottom">
