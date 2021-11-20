@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import PrevSvg from '../../../img/prev.svg';
 import NextSvg from '../../../img/next.svg';
-
 import special from '../../../special.json';
 
-export default function Special() {
+export default function Special(props) {
+    const {onAddToCart} = props
 
     const [currentSlide, setCurrentSlide] = useState(1);
     const slidesPerPage = 1;
@@ -35,18 +35,19 @@ export default function Special() {
             </div>
             <div className="right">
                 <div className="cards">
-                    {Slide.map((item) => {
+                    {Slide.map((product) => {
                         return (
-                            <div key={item.key} className="card">
+                            <div key={product.key} className="card">
                                 <img
                                     className="cardImage"
-                                    alt={item.name}
-                                    src={item.photo}
+                                    alt={product.name}
+                                    src={product.photo}
                                 />
                                 <div className="cardText">
-                                    <p>{item.name + " " + item.key}</p>
-                                    <p>{item.price} .00 Rsd</p>
-                                    <div className="btn">
+                                    <p>{product.name + " " + product.key}</p>
+                                    <p>{product.price} .00 Rsd</p>
+                                    <div
+                                    onClick={()=>onAddToCart(product)} className="btn">
                                         Dodaj u korpu
                                     </div>
                                 </div>

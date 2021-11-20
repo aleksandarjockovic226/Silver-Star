@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import Header from './header.jsx';
@@ -11,14 +11,26 @@ import Cart from './pages/cart.jsx';
 import '../sass/layout.sass'
 
 function Layout() {
+
+    const [inCart, setInCart] = useState([])
+
+    const onAddToCart = (product) => {
+        const exist = inCart.find((item) => item.key === product.key);
+        if (exist) {
+            setInCart(inCart.map((item) => item.key === product.key ? { ...exist, quantity: exist.quantity + 1 } : item))
+        } else {
+            setInCart([...inCart, { ...product, quantity: 1 }])
+        }
+    }
+
     return (
         <BrowserRouter>
             <div className="wrapper">
                 <Header />
                 <Routes>
-                    <Route path='/' element={<Home />} />
-                    <Route path='/products' element={<Products />} />
-                    <Route path='/cart' element={<Cart />} />
+                    <Route path='/' element={<Home onAddToCart={onAddToCart} />} />
+                    <Route path='/products' element={<Products onAddToCart={onAddToCart} />} />
+                    <Route path='/cart' element={<Cart inCart={inCart} onAddToCart={onAddToCart} />} />
                 </Routes>
                 <Footer />
             </div>

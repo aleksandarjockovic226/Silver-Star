@@ -10,7 +10,8 @@ const all = ["Svi"]
 const cat = [...new Set(products.map((item) => item.category))];
 const allCat = all.concat(cat)
 
-export default function Products() {
+export default function Products(props) {
+    const {onAddToCart} = props
     // products to display 
     const [productsOnPage, setProductsOnPage] = useState(products)
     // pagination
@@ -116,15 +117,17 @@ export default function Products() {
                 <div className="grid">
                     {productsOnPage
                         .slice(pagesVisited, pagesVisited + itemsPerPage)
-                        .map((item) => {
+                        .map((product) => {
                             return (
-                                <div className="item-container" key={item.id}>
+                                <div className="item-container" key={product.id}>
                                     <div className="item">
-                                        <img src={item.photo} alt={item.id} />
-                                        <p>{item.name}</p>
+                                        <img src={product.photo} alt={product.id} />
+                                        <p>{product.name + " " + product.key}</p>
                                         <div className="card-div">
-                                            <p>{item.price} .00 Rsd</p>
-                                            <div className="btn">
+                                            <p>{product.price} .00 Rsd</p>
+                                            <div
+                                            onClick={()=>onAddToCart(product)}
+                                            className="btn">
                                                 Dodaj u korpu
                                             </div>
                                         </div>
