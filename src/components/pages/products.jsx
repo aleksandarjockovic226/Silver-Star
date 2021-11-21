@@ -11,7 +11,7 @@ const cat = [...new Set(products.map((item) => item.category))];
 const allCat = all.concat(cat)
 
 export default function Products(props) {
-    const {onAddToCart} = props
+    const { onAddToCart } = props
     // products to display 
     const [productsOnPage, setProductsOnPage] = useState(products)
     // pagination
@@ -41,7 +41,7 @@ export default function Products(props) {
             paginate(math)
             if (pagesNumber.length === 1) {
                 paginate(0)
-            } 
+            }
         } else {
             paginate(pageNumber - 1)
         }
@@ -91,6 +91,7 @@ export default function Products(props) {
                     allCat.map((cat) => {
                         return (
                             <p
+                                className="category"
                                 key={cat}
                                 onClick={() => {
                                     filter(cat)
@@ -126,8 +127,8 @@ export default function Products(props) {
                                         <div className="card-div">
                                             <p>{product.price} .00 Rsd</p>
                                             <div
-                                            onClick={()=>onAddToCart(product)}
-                                            className="btn">
+                                                onClick={() => onAddToCart(product)}
+                                                className="btn">
                                                 Dodaj u korpu
                                             </div>
                                         </div>

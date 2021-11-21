@@ -11,16 +11,11 @@ import Cart from './pages/cart.jsx';
 import '../sass/layout.sass'
 
 function Layout() {
-
     const localStorageCart = JSON.parse(localStorage.getItem("Cart") || "[]")
-
-
     const [inCart, setInCart] = useState(localStorageCart)
-
     useEffect(() => {
         localStorage.setItem("Cart", JSON.stringify(inCart));
     }, [inCart])
-
     const onAddToCart = (product) => {
         const exist = inCart.find((item) => item.key === product.key);
         if (exist) {
