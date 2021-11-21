@@ -1,7 +1,7 @@
 import React from "react";
 
 function CartItemsList(props) {
-    const {inCart, onAddToCart, onRemoveFromCart, onRemoveItem } = props
+    const { inCart, onAddToCart, onRemoveFromCart, onRemoveItem } = props
     return (
         <div className="cartItemsList">
             <h2>Vaša korpa:</h2>
@@ -28,6 +28,7 @@ function CartItemsList(props) {
                     )
                 })
             }
-        </div>)
+        </div>
+    )
 }
 export default CartItemsList

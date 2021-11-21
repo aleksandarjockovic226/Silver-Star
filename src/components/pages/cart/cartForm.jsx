@@ -1,7 +1,7 @@
 import React from "react";
 
 function CartFrom(props) {
-    const { nameRef, phoneRef, addressRef, nameErr, phoneErr, addressErr,sentMessage, handleSend } = props
+    const { nameRef, phoneRef, addressRef, nameErr, phoneErr, addressErr, sentMessage, handleSend } = props
     return (
         <div className="form">
             <h2>Unesite Vaše podatke za dostavu</h2>
@@ -17,11 +17,9 @@ function CartFrom(props) {
                 <label htmlFor="address">
                     {addressErr}
                 </label>
-                <input ref={addressRef} label="address" type="text" placeholder="Adresa" />
-
-                <button onClick={handleSend} name className="btn">Poručite</button>
+                <input ref={addressRef} label="address" type="text" placeholder="Mesto ulica i broj" />
+                <button onClick={handleSend} name="btn" className="btn">Poručite</button>
                 <label className="labelSent" htmlFor="btn">{sentMessage}</label>
-
             </form>
         </div>
     )

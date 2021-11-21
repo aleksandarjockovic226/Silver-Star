@@ -4,7 +4,6 @@ import products from '../../products.json'
 import Filters from './products/filters';
 import ProductsGrid from './products/productsGrid';
 import Pagination from './products/pagination';
-
 // filter category btns
 const all = ["Svi"]
 const cat = [...new Set(products.map((item) => item.category))];

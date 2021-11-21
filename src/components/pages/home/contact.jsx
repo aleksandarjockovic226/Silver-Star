@@ -2,25 +2,20 @@ import React, { useRef, useState } from 'react';
 import SendSvg from '../../../img/send.svg';
 
 function Contact() {
+    // contact form validation
     const name = useRef();
     const email = useRef();
     const phone = useRef();
     const message = useRef();
-
     const [nameErr, setNameErr] = useState("")
     const [emailErr, setEmailErr] = useState("")
     const [phoneErr, setPhoneErr] = useState("")
     const [messageErr, setMessageErr] = useState("")
-
     const [sentMessage, setSentMessage] = useState("")
-
     let regexEmail = /^(([^<>()[\].,;:\s@"]+(.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+.)+[^<>()[\].,;:\s@"]{2,})$/i;
     let regexPhone = /^[+]?[(]?[0-9]{3}[)]?[-\s.]?[0-9]{3}[-\s.]?[0-9]{4,6}$/im;
-
     const handleSend = (e) => {
-
         e.preventDefault();
-
         if (name.current.value === "" || name.current.value.length < 3) {
             const nameErrText = "Unesite ime sa minimum 3 karaktera."
             setNameErr(nameErrText)
@@ -50,7 +45,6 @@ function Contact() {
         } else {
             setMessageErr("")
         }
-
         if (nameErr !== "" && emailErr !== "" && phoneErr !== "" && messageErr !== "") {
             setSentMessage("")
             return
@@ -61,9 +55,6 @@ function Contact() {
             phone.current.value = ""
             message.current.value = ""
         }
-
-
-
     }
     return (
         <div id="contact">
@@ -109,7 +100,6 @@ function Contact() {
                         name="message"
                         placeholder="Poruka"
                     ></textarea>
-
                     <button name="btn" onClick={handleSend} >Pošaljite<img src={SendSvg} alt="send" /></button>
                     <label className="labelSent" htmlFor="btn">{sentMessage}</label>
                 </form>

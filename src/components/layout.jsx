@@ -1,21 +1,21 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-
 import Header from './header.jsx';
 import Footer from './footer.jsx';
-
 import Home from './pages/home.jsx'
 import Products from './pages/products.jsx'
 import Cart from './pages/cart.jsx';
-
 import '../sass/layout.sass'
 
 function Layout() {
+    // use local storage if already exist
     const localStorageCart = JSON.parse(localStorage.getItem("Cart") || "[]")
+    //cart
     const [inCart, setInCart] = useState(localStorageCart)
     useEffect(() => {
         localStorage.setItem("Cart", JSON.stringify(inCart));
     }, [inCart])
+    // add product to cart
     const onAddToCart = (product) => {
         const exist = inCart.find((item) => item.key === product.key);
         if (exist) {
@@ -26,6 +26,7 @@ function Layout() {
             localStorage.setItem("Cart", JSON.stringify(inCart));
         }
     }
+    //  decrease number of item quantity in cart
     const onRemoveFromCart = (product) => {
         const exist = inCart.find((item) => item.key === product.key);
         if (exist.quantity === 1) {
@@ -36,6 +37,7 @@ function Layout() {
             localStorage.setItem("Cart", JSON.stringify(inCart));
         }
     }
+    // remove item from cart
     const onRemoveItem = (product) => {
         setInCart(inCart.filter((item) => item.key !== product.key))
         localStorage.setItem("Cart", JSON.stringify(inCart));

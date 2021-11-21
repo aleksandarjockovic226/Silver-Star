@@ -1,5 +1,4 @@
 import React from 'react';
-
 import '../sass/footer.sass'
 
 export default function Footer() {
@@ -25,7 +24,6 @@ export default function Footer() {
                     <li>Lorem, ipsum dolor.</li>
                     <li>Lorem, ipsum.</li>
                 </ul>
-
             </div>
         </footer>
     )

@@ -12,6 +12,5 @@ function CartPrice(props) {
             <div className="totalPrice"><p>Ukupna vrednost korpe sa dostavom</p><span>{totalPrice}.00rsd</span></div>
         </div>
     )
-
 }
 export default CartPrice

@@ -5,14 +5,12 @@ import special from '../../../special.json';
 
 export default function Special(props) {
     const {onAddToCart} = props
-
+    // patination
     const [currentSlide, setCurrentSlide] = useState(1);
     const slidesPerPage = 1;
-
     const indexOfLastSlide = currentSlide * slidesPerPage;
     const indexOfFirstSlide = indexOfLastSlide - slidesPerPage;
     const Slide = special.slice(indexOfFirstSlide, indexOfLastSlide);
-
     function onNext() {
         if (currentSlide === special.length) {
             setCurrentSlide(1)

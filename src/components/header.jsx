@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 import CartSvg from '../img/cart.svg';
-
 import '../sass/header.sass'
 
 export default function Header(props) {
