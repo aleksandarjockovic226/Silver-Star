@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import '../../sass/products.sass'
 import products from '../../products.json'
-
-import PrevSvg from '../../img/prev.svg';
-import NextSvg from '../../img/next.svg';
+import Filters from './products/filters';
+import ProductsGrid from './products/productsGrid';
+import Pagination from './products/pagination';
 
 // filter category btns
 const all = ["Svi"]
@@ -86,74 +86,25 @@ export default function Products(props) {
     }
     return (
         <div id="products">
-            <div className="filters">
-                <div className="cat">{
-                    allCat.map((cat) => {
-                        return (
-                            <p
-                                className="category"
-                                key={cat}
-                                onClick={() => {
-                                    filter(cat)
-                                }}
-                            >
-                                {cat}
-                            </p>
-                        )
-                    })}
-                </div>
-                <form className="sort">
-                    <select
-                        onChange={handler}
-                    >
-                        <option value="podrazumevano">--Sortiraj--</option>
-                        <option value="novije">Prvo novije</option>
-                        <option value="starije">Prvo starije</option>
-                        <option value="jeftinije">Prvo jeftinije</option>
-                        <option value="skuplje">Prvo skuplje</option>
-                    </select>
-                </form>
-            </div>
+            <Filters
+                allCat={allCat}
+                filter={filter}
+                handler={handler}
+            />
             <div className="products-container">
-                <div className="grid">
-                    {productsOnPage
-                        .slice(pagesVisited, pagesVisited + itemsPerPage)
-                        .map((product) => {
-                            return (
-                                <div className="item-container" key={product.id}>
-                                    <div className="item">
-                                        <img src={product.photo} alt={product.id} />
-                                        <p>{product.name + " " + product.key}</p>
-                                        <div className="card-div">
-                                            <p>{product.price} .00 Rsd</p>
-                                            <div
-                                                onClick={() => onAddToCart(product)}
-                                                className="btn">
-                                                Dodaj u korpu
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            );
-                        })
-                    }
-                </div>
-                <div className="pagination">
-                    <div className="arrows">
-                        <div onClick={onPrev} className="prev"><img src={PrevSvg} alt="arrow-prev" /></div>
-                        <div onClick={onNext} className="next"><img src={NextSvg} alt="arrow-next" /></div>
-                    </div>
-                    <ul className="numbers">
-                        {pagesNumber.map((number) => (
-                            <li key={number}
-                                className={pageNumber + 1 === number ? "active-page" : ""}
-                                onClick={() =>
-                                    paginate(number)}>
-                                {number--}
-                            </li>
-                        ))}
-                    </ul>
-                </div>
+                <ProductsGrid
+                    productsOnPage={productsOnPage}
+                    pagesVisited={pagesVisited}
+                    itemsPerPage={itemsPerPage}
+                    onAddToCart={onAddToCart}
+                />
+                <Pagination
+                    onPrev={onPrev}
+                    onNext={onNext}
+                    pagesNumber={pagesNumber}
+                    pageNumber={pageNumber}
+                    paginate={paginate}
+                />
             </div>
         </div>
     )
