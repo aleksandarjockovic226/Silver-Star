@@ -14,15 +14,6 @@ export default function Cart(props) {
                 <div className="cartItemsList">
                     <h2>Vaša korpa je prazna</h2>
                 </div>
-                <div className="buy">
-                    <p className="title">Vrednost Vaše korpe:</p>
-                    <div className="container">
-                        <div className="basePrice"><p>Vrednost korpe:</p><span>0.00rsd</span></div>
-                        <div className="shippingPrice"><p>Dostava</p><span>0.00rsd</span></div>
-                    </div>
-                    <div className="totalPrice"><p>Ukupna vrednost korpe sa dostavom</p><span>0.00rsd</span></div>
-                    <button>Poručite</button>
-                </div>
             </div>
         )
     } else {
