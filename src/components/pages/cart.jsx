@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import CartItemsList from './cart/cartItemsList';
 import CartPrice from './cart/cartPrice';
 import CartFrom from './cart/cartForm'
@@ -10,6 +10,17 @@ export default function Cart(props) {
     const shippingPrice = itemsPrice > 3000 ? 0 : 350;
     const totalPrice = itemsPrice + shippingPrice;
 
+    const nameRef = useRef();
+    const phoneRef = useRef();
+    const addressRef = useRef();
+
+    const [nameErr, setNameErr] = useState("")
+    const [phoneErr, setPhoneErr] = useState("")
+    const [addressErr, setAddressErr] = useState("")
+
+    const [sentMessage, setSentMessage] = useState("")
+
+    let regexPhone = /^[+]?[(]?[0-9]{3}[)]?[-\s.]?[0-9]{3}[-\s.]?[0-9]{4,6}$/im;
     if (inCart.length === 0) {
         return (
             <div id="cart">
@@ -17,6 +28,41 @@ export default function Cart(props) {
             </div>
         )
     } else {
+        const handleSend = (e) => {
+            e.preventDefault();
+            if (nameRef.current.value === "" || nameRef.current.value.length < 7) {
+                const nameErrText = "Unesite ime sa minimum 7 karaktera."
+                setNameErr(nameErrText)
+                setSentMessage("")
+                return
+            } else {
+                setNameErr("")
+            } if (phoneRef.current.value === "" || !regexPhone.test(phoneRef.current.value)) {
+                const phoneErrText = "Unesite ispravan broj telefona."
+                setPhoneErr(phoneErrText)
+                setSentMessage("")
+                return
+            } else {
+                setPhoneErr("")
+            } if (addressRef.current.value === "" || addressRef.current.value.length < 9) {
+                const messageErrText = "Unesite poruku sa minimum 9 karaktera."
+                setAddressErr(messageErrText)
+                setSentMessage("")
+                return
+            } else {
+                setAddressErr("")
+            }
+
+            if (nameErr !== "" && phoneErr !== "" && addressErr !== "") {
+                setSentMessage("")
+                return
+            } else {
+                setSentMessage("Vaša pordžbina je poslata. Hvala što kupujete kod nas.")
+                nameRef.current.value = ""
+                phoneRef.current.value = ""
+                addressRef.current.value = ""
+            }
+        }
         return (
             <div id="cart">
                 <CartItemsList
@@ -31,7 +77,16 @@ export default function Cart(props) {
                         shippingPrice={shippingPrice}
                         totalPrice={totalPrice}
                     />
-                    <CartFrom />
+                    <CartFrom
+                        nameRef={nameRef}
+                        phoneRef={phoneRef}
+                        addressRef={addressRef}
+                        nameErr={nameErr}
+                        phoneErr={phoneErr}
+                        addressErr={addressErr}
+                        sentMessage={sentMessage}
+                        handleSend={handleSend}
+                    />
                 </div>
             </div>
         )
