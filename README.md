@@ -5,11 +5,11 @@ The client requested the design and front-end development of en e-commerce websi
 
 ### Requirements: 
 
-- [x] - Design the website:
+- [x] 1. Design the website:
   - minimal,
   - bright,
   - modern
-- [x] - Develop the website
+- [x] 2. Develop the website
   - Pages: Home, Products, Cart
   - Functionalities:
     - Contact form
