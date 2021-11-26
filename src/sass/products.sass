@@ -1,7 +1,6 @@
 #products
     padding: 3rem 0px
     display: grid
-    grid-template-columns: 12% 1fr
     .filters
         p
             font-size: 1.15rem
@@ -13,7 +12,6 @@
         display: grid
         .grid
             display: grid
-            grid-template-columns: 1fr 1fr 1fr 1fr
             justify-items: center
             .item
                 margin-bottom: 20px
@@ -25,6 +23,7 @@
                     justify-content: space-between
                     align-items: center
                     .btn
+                        white-space: nowrap
                         cursor: pointer
                         padding: .7rem 1.2rem
                         border: 1px solid black
@@ -51,3 +50,33 @@
                     border: 1px solid #323232
                     background-color: #323232
                     color: white
+@media screen and (min-width: 1370px)
+    #products
+        grid-template-columns: 12% 1fr
+        .grid
+            grid-template-columns: 1fr 1fr 1fr 1fr
+@media screen and (max-width: 1370px)
+    #products
+        grid-template-columns: 1fr
+        .filters
+            display: flex
+            justify-content: space-between
+            align-items: center
+        .grid
+            grid-template-columns: 1fr 1fr 1fr
+@media screen and (max-width: 769px)
+    #products
+        .cat
+            p
+                padding-bottom: 10px
+        .grid
+            grid-template-columns: 1fr 1fr
+@media screen and (max-width: 524px)
+    #products
+        .filters
+            align-items: center
+            .cat
+                p
+                    padding-bottom: 10px
+        .grid
+            grid-template-columns: 1fr
