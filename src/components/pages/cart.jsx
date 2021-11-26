@@ -1,11 +1,12 @@
 import React, { useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 import CartItemsList from './cart/cartItemsList';
 import CartPrice from './cart/cartPrice';
 import CartFrom from './cart/cartForm'
 import '../../sass/cart.sass'
 
 export default function Cart(props) {
-    const { inCart, onAddToCart, onRemoveFromCart, onRemoveItem } = props
+    const { inCart, onAddToCart, onRemoveFromCart, onRemoveItem, toggleNav } = props
     // cart pricing
     const itemsPrice = inCart.reduce((a, c) => a + c.price * c.quantity, 0);
     const shippingPrice = itemsPrice > 3000 ? 0 : 350;
@@ -23,6 +24,7 @@ export default function Cart(props) {
         return (
             <div id="cart">
                 <h2>Vaša korpa je prazna</h2>
+                <p>Pogledajte našu ponudu na linku: <Link onClick={toggleNav} to='/products'>Proizvodi</Link></p>
             </div>
         )
     } else {

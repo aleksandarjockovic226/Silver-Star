@@ -63,6 +63,7 @@ function Layout() {
                         onRemoveFromCart={onRemoveFromCart}
                         onAddToCart={onAddToCart}
                         onRemoveItem={onRemoveItem}
+                        toggleNav={toggleNav}
                     />} />
                 </Routes>
                 <Footer />
