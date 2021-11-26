@@ -1,4 +1,4 @@
-# :ring: Silver Star :star:
+# :ring: Silver Star :ring:
 
 ## About project
 
