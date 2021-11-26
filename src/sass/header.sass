@@ -13,10 +13,7 @@ header
         align-items: center
         .logo
             font-size: 1.8rem
-        .burger
-            display: none
         ul
-            display: flex
             list-style-type: none
             li
                 margin: 0px 20px
@@ -38,3 +35,44 @@ header
         width: 1.5rem
         height: 1.5rem
         border-radius: 50%
+
+@media screen and (min-width: 1000px)
+    header
+        nav
+            ul
+                display: flex
+            .burger
+                display: none
+
+@media screen and (max-width: 1000px)
+    header
+        nav
+            width: 55%
+            .hidden
+                display: none
+            ul
+                position: absolute
+                top: 60px
+                width: 100%
+                height: 40vh
+                background-color: rgba(0, 0, 0, .9)
+                display: grid
+                align-items: center
+                justify-content: center
+                text-align: center
+                li
+                    a
+                        color: white
+            .burger
+                .line1,.line2,.line3
+                    margin: 5px
+                    width: 20px
+                    height: 3px
+                    background-color: black
+            .burgerTransform
+                .line1
+                    transform: rotate(-45deg) translate(-5px,6px)
+                .line2
+                    display: none
+                .line3
+                    transform: rotate(45deg)

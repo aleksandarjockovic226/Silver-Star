@@ -42,10 +42,19 @@ function Layout() {
         setInCart(inCart.filter((item) => item.key !== product.key))
         localStorage.setItem("Cart", JSON.stringify(inCart));
     }
+    // toggle mobile nav
+    const [toggleNavSwitch, setToggleNavSwitch] = useState(false);
+    const toggleNav = () => {
+        toggleNavSwitch ? setToggleNavSwitch(false) : setToggleNavSwitch(true)
+    }
     return (
         <BrowserRouter>
             <div className="wrapper">
-                <Header numberOfItemsInCart={inCart.length} />
+                <Header
+                    numberOfItemsInCart={inCart.length}
+                    toggleNav={toggleNav}
+                    toggleNavSwitch={toggleNavSwitch}
+                />
                 <Routes>
                     <Route path='/' element={<Home onAddToCart={onAddToCart} />} />
                     <Route path='/products' element={<Products onAddToCart={onAddToCart} />} />
