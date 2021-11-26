@@ -4,7 +4,7 @@ import NextSvg from '../../../img/next.svg';
 import special from '../../../special.json';
 
 export default function Special(props) {
-    const {onAddToCart} = props
+    const { onAddToCart } = props
     // patination
     const [currentSlide, setCurrentSlide] = useState(1);
     const slidesPerPage = 1;
@@ -42,12 +42,12 @@ export default function Special(props) {
                                     src={product.photo}
                                 />
                                 <div className="cardText">
-                                    <p>{product.name + " " + product.key}</p>
+                                    <p className="productPrice">{product.name + " " + product.key}</p>
                                     <p>{product.price} .00 Rsd</p>
-                                    <div
-                                    onClick={()=>onAddToCart(product)} className="btn">
+                                    <button
+                                        onClick={() => onAddToCart(product)} className="btn">
                                         Dodaj u korpu
-                                    </div>
+                                    </button>
                                 </div>
                             </div>
                         )

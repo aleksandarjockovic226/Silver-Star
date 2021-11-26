@@ -1,28 +1,20 @@
 #hero
     display: grid
     align-items: center
-    grid-template-columns: 50% 40%
-    grid-gap: 10%
-    height: calc( 100vh - 60px )
     .left
         background-image: url(../img/hero1.jpg)
         background-size: cover
         background-color: gray
-        height: 60vh
         align-items: end
-
         p
             color: white
             font-size: 5rem
             text-align: start
             margin-left: 1rem
-
-
     .right
         background-image: url(../img/hero2.jpg)
         background-size: cover
         background-color: gray
-        height: 50vh
         p
             text-align: end
             margin-right: 1rem
@@ -30,3 +22,20 @@
             font-size: 3rem
     .left,.right
         display: grid
+@media screen and (min-width: 1024px)
+    #hero
+        grid-template-columns: 50% 45%
+        height: calc( 100vh - 60px )
+        grid-gap: 5%
+        .left
+            height: 60vh
+        .right
+            height: 50vh
+@media screen and (max-width: 1024px)
+    #hero
+        justify-content: center
+        grid-template-columns: 1fr
+        grid-gap: 1rem
+        top: 60px
+        .right,.left
+            height: 39rem
