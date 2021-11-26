@@ -1,11 +1,9 @@
 #cart
-    display: flex
     justify-content: space-between
     padding: 3rem 0px
     h2
         margin-bottom: 2rem
     .cartItemsList
-        width: 66%
         display: grid
         box-shadow: 0px 0px 6px -2px rgba(0,0,0,0.63)
         padding: 1rem
@@ -21,7 +19,8 @@
                 display: grid
                 align-content: space-between
             .top,.bottom
-                height: 1.7rem
+                text-align: center
+                height: 2rem
                 display: flex
                 align-items: center
                 justify-content: space-between
@@ -46,10 +45,10 @@
                     border-top: 1px solid #323232
                     border-bottom: 1px solid #323232
             .remove
-                font-size: 1.3rem
+                font-size: 1.1rem
                 cursor: pointer
+
     .left
-        width: 28%
         .price
             box-shadow: 0px 0px 6px -2px rgba(0,0,0,0.63)
             padding: 1rem
@@ -78,3 +77,19 @@
                     border: 1px solid #323232
                     padding: .5rem 1rem
                     margin-bottom: 1rem
+@media screen and (min-width: 1023px)
+    #cart
+        display: flex
+        .cartItemsList
+            width: 66%
+        .left
+            width: 28%
+
+@media screen and (max-width: 1023px)
+    #cart
+        display: grid
+        grid-gap: 2rem
+        .cartItemsList
+            width: calc( 100% - 2rem )
+        .left
+            width: 100%
