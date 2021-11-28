@@ -5,6 +5,7 @@ import Footer from './footer.jsx';
 import Home from './pages/home.jsx'
 import Products from './pages/products.jsx'
 import Cart from './pages/cart.jsx';
+import NotFound from './pages/404.jsx';
 import '../sass/layout.sass'
 
 function Layout() {
@@ -56,8 +57,10 @@ function Layout() {
                     toggleNavSwitch={toggleNavSwitch}
                 />
                 <Routes>
-                    <Route path='/' element={<Home onAddToCart={onAddToCart} />} />
-                    <Route path='/products' element={<Products onAddToCart={onAddToCart} />} />
+                    <Route path='/' element={<Home
+                        onAddToCart={onAddToCart} />} />
+                    <Route path='/products' element={<Products
+                        onAddToCart={onAddToCart} />} />
                     <Route path='/cart' element={<Cart
                         inCart={inCart}
                         onRemoveFromCart={onRemoveFromCart}
@@ -65,6 +68,10 @@ function Layout() {
                         onRemoveItem={onRemoveItem}
                         toggleNav={toggleNav}
                     />} />
+                    <Route
+                        path="*"
+                        element={<NotFound />}
+                    />
                 </Routes>
                 <Footer />
             </div>
