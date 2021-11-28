@@ -14,11 +14,11 @@ function ProductsGrid(props) {
                                 <p>{product.name + " " + product.key}</p>
                                 <div className="card-div">
                                     <p>{product.price} .00 Rsd</p>
-                                    <div
+                                    <button
                                         onClick={() => onAddToCart(product)}
                                         className="btn">
                                         Dodaj u korpu
-                                    </div>
+                                    </button>
                                 </div>
                             </div>
                         </div>

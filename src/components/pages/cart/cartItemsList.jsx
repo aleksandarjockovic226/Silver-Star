@@ -20,7 +20,7 @@ function CartItemsList(props) {
                                     </div>
                                 </div>
                                 <div className="bottom">
-                                    <div onClick={() => onRemoveItem(product)} className="remove">Ukolni iz korpe</div>
+                                    <button onClick={() => onRemoveItem(product)} className="remove">Ukolni iz korpe</button>
                                     <div className="price">Cena po komadu: {product.price}.00 rsd</div>
                                 </div>
                             </div>
